@@ -6,7 +6,7 @@ const app = express();
 
 const PORT = 4000;
 
-app.use('/', (req, res) => {
+app.get('/', (req, res) => {
     try {
         res.status(200).json({message:"Welcome to the 1st NodeJs Task"});
     } catch (error) {
