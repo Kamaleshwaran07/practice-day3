@@ -25,7 +25,8 @@ app.get('/write', (req, res) => {
 })
 app.get('/read', (req, res) => {
     try {
-        fs.readFileSync(filePath, "utf8")
+        let data = fs.readFileSync(filePath, "utf8")
+        res.status(200).send(`The timestamp for this ${data}`)
     } catch (error) {
         console.log(error);
     }
