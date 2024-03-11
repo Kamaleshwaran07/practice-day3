@@ -6,13 +6,13 @@ const app = express();
 
 const PORT = 4000;
 
-// app.use('/', (req, res) => {
-//     try {
-//         res.status(200).json({message:"Welcome to the API"});
-//     } catch (error) {
-//         console.error(error);
-//     }
-// })
+app.use('/', (req, res) => {
+    try {
+        res.status(200).json({message:"Welcome to the 1st NodeJs Task"});
+    } catch (error) {
+        console.error(error);
+    }
+})
 let today = format(new Date(), 'dd-MM-yyyy-HH-mm-ss')
 let filePath = `TimeStamp/${today}.txt`
 app.get('/write', (req, res) => {
