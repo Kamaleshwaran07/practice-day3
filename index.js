@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
         console.error(error);
     }
 })
-let today = format(new Date(), 'dd-MM-yyyy-hh-mm-ss')
+let today = format(new Date(), 'dd-MM-yyyy h:mm a')
 let filePath = `TimeStamp/${today}.txt`
 app.get('/write', (req, res) => {
     try {
